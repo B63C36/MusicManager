@@ -1,19 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package MusicApp;
 
-/**
- *
- * @author Hamilton1
- */
 public class MusicGUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MusicGUI
-     */
-    StackInterface stackInterface;
+    MusicInterface stackInterface;
 
     public MusicGUI() {
         stackInterface = new MyStack();
@@ -229,10 +218,8 @@ public class MusicGUI extends javax.swing.JFrame {
 
     private void numOfSongsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numOfSongsActionPerformed
         // TODO add your handling code here:
-        int iStackSize = stackInterface.size();
-        
+        int iStackSize = stackInterface.size();       
         likedSongs.append("There are " + iStackSize + " song(s) in this playlist\n");
-
     }//GEN-LAST:event_numOfSongsActionPerformed
 
     private void removeBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBTNActionPerformed
@@ -252,12 +239,14 @@ public class MusicGUI extends javax.swing.JFrame {
         } else {
             stackInterface.emptyStack();
             likedSongs.append("All songs were removed!\n");
+            rnbSongs.append("All songs were removed!\n");
+            popSongs.append("All songs were removed!\n");
         }
     }//GEN-LAST:event_removeAllBTNActionPerformed
 
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         // TODO add your handling code here:
-
+        System.exit(0);
     }//GEN-LAST:event_jButtonExitActionPerformed
 
     private void songNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_songNameActionPerformed
